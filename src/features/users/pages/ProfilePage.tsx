@@ -212,6 +212,10 @@ function ProfilePage() {
               </label>
               <input
                 type="text"
+                id="profile-name-input"
+                name="name"
+                autoComplete="name"
+                aria-label="Nama Lengkap"
                 data-testid="profile-name-input"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -226,6 +230,10 @@ function ProfilePage() {
               </label>
               <input
                 type="email"
+                id="profile-email-input"
+                name="email"
+                autoComplete="email"
+                aria-label="Alamat Email"
                 data-testid="profile-email-input"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -270,6 +278,10 @@ function ProfilePage() {
               </label>
               <input
                 type="password"
+                id="current-password-input"
+                name="current-password"
+                autoComplete="current-password"
+                aria-label="Kata Sandi Saat Ini"
                 data-testid="current-password-input"
                 value={oldPassword}
                 onChange={(e) => setOldPassword(e.target.value)}
@@ -285,6 +297,10 @@ function ProfilePage() {
               </label>
               <input
                 type="password"
+                id="new-password-input"
+                name="new-password"
+                autoComplete="new-password"
+                aria-label="Kata Sandi Baru"
                 data-testid="new-password-input"
                 value={newPassword}
                 onChange={(e) => setNewPassword(e.target.value)}
@@ -300,6 +316,10 @@ function ProfilePage() {
               </label>
               <input
                 type="password"
+                id="confirm-password-input"
+                name="new-password-confirmation"
+                autoComplete="new-password"
+                aria-label="Ulangi Kata Sandi Baru"
                 data-testid="confirm-password-input"
                 value={newPasswordConfirmation}
                 onChange={(e) => setNewPasswordConfirmation(e.target.value)}

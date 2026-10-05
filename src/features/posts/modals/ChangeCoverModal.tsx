@@ -109,7 +109,7 @@ function ChangeCoverModal({
               <h3 className="text-base font-bold text-slate-800">
                 Unggah Cover Postingan
               </h3>
-              <p className="text-[11px] text-slate-400">
+              <p className="text-[11px] text-slate-600">
                 Rasio terbaik 16:9, maksimal 1MB
               </p>
             </div>
@@ -118,7 +118,7 @@ function ChangeCoverModal({
             type="button"
             data-testid="close-cover-modal-btn"
             onClick={onClose}
-            className="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
+            className="p-1.5 rounded-lg text-slate-600 hover:text-slate-600 hover:bg-slate-100 transition-colors"
           >
             <IconX size={18} />
           </button>

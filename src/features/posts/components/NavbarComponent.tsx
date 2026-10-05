@@ -62,7 +62,7 @@ function NavbarComponent({
               <span className="text-lg font-bold leading-tight bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-800 bg-clip-text text-transparent">
                 Delcom Post
               </span>
-              <span className="hidden sm:flex items-center gap-1 text-[11px] font-medium text-slate-400 leading-tight">
+              <span className="hidden sm:flex items-center gap-1 text-[11px] font-medium text-slate-600 leading-tight">
                 <IconSparkles size={11} />
                 Berbagi cerita &amp; momen
               </span>
@@ -100,7 +100,7 @@ function NavbarComponent({
             </div>
             <IconChevronDown
               size={16}
-              className={`text-slate-400 transition-transform duration-200 ${
+              className={`text-slate-600 transition-transform duration-200 ${
                 dropdownOpen ? "rotate-180" : ""
               }`}
             />

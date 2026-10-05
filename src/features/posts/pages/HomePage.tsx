@@ -156,7 +156,7 @@ function HomePage() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs flex items-center justify-between">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+            <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">
               Total Postingan
             </p>
             <h3 className="text-3xl font-black text-slate-800 mt-1">{totalPosts}</h3>
@@ -168,7 +168,7 @@ function HomePage() {
 
         <div className="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs flex items-center justify-between">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+            <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">
               Total Suka
             </p>
             <h3 className="text-3xl font-black text-rose-500 mt-1">{totalLikes}</h3>
@@ -180,7 +180,7 @@ function HomePage() {
 
         <div className="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs flex items-center justify-between">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+            <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">
               Total Komentar
             </p>
             <h3 className="text-3xl font-black text-sky-600 mt-1">{totalComments}</h3>
@@ -226,10 +226,14 @@ function HomePage() {
           <div className="relative flex-1 sm:w-72">
             <IconSearch
               size={18}
-              className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"
+              className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-600"
             />
             <input
               type="text"
+              id="search-post-input"
+              name="search"
+              autoComplete="off"
+              aria-label="Cari postingan"
               data-testid="search-post-input"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -321,7 +325,7 @@ function HomePage() {
                       <p className="text-sm font-semibold text-slate-800 truncate">
                         {post.author?.name || "Pengguna"}
                       </p>
-                      <p className="text-[11px] text-slate-400 truncate">
+                      <p className="text-[11px] text-slate-600 truncate">
                         {formatDate(post.created_at)}
                       </p>
                     </div>

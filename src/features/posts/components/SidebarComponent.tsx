@@ -66,7 +66,7 @@ function SidebarComponent({ isSidebarOpen, onCloseMobile }: SidebarComponentProp
         <div className="flex flex-col h-full justify-between">
           <div className="space-y-6">
             <div>
-              <p className="px-3 text-xs font-bold uppercase tracking-wider text-slate-400">
+              <p className="px-3 text-xs font-bold uppercase tracking-wider text-slate-600">
                 Menu Utama
               </p>
               <nav className="mt-3 space-y-1">
@@ -93,7 +93,7 @@ function SidebarComponent({ isSidebarOpen, onCloseMobile }: SidebarComponentProp
                           className={
                             item.active
                               ? "text-white"
-                              : "text-slate-400 group-hover:text-slate-600"
+                              : "text-slate-600 group-hover:text-slate-600"
                           }
                         />
                         <span>{item.label}</span>
@@ -110,7 +110,7 @@ function SidebarComponent({ isSidebarOpen, onCloseMobile }: SidebarComponentProp
                 <IconCamera size={16} stroke={2.4} />
                 <p className="text-xs font-bold">Bagikan Momenmu</p>
               </div>
-              <p className="mt-1.5 text-[11px] leading-relaxed text-slate-500">
+              <p className="mt-1.5 text-[11px] leading-relaxed text-slate-600">
                 Unggah cover menarik dan tulis deskripsi seru agar postinganmu
                 dilihat banyak orang.
               </p>
@@ -119,7 +119,7 @@ function SidebarComponent({ isSidebarOpen, onCloseMobile }: SidebarComponentProp
 
           <div className="p-3 rounded-2xl bg-gradient-to-br from-slate-50 to-indigo-50/60 border border-slate-200/70">
             <p className="text-xs font-semibold text-slate-700">Praktikum PABWE 2026</p>
-            <p className="text-[11px] text-slate-400 mt-0.5">
+            <p className="text-[11px] text-slate-600 mt-0.5">
               Next.js &middot; TypeScript &middot; Redux
             </p>
           </div>

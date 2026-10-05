@@ -64,11 +64,14 @@ function LoginPage() {
         <div className="relative">
           <IconMail
             size={18}
-            className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"
+            className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-600"
           />
           <input
             type="email"
             id="login-email-input"
+            name="email"
+            autoComplete="email"
+            aria-label="Alamat Email"
             data-testid="login-email-input"
             value={email}
             onChange={onEmailChange}
@@ -86,11 +89,14 @@ function LoginPage() {
         <div className="relative">
           <IconLock
             size={18}
-            className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"
+            className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-600"
           />
           <input
             type="password"
             id="login-password-input"
+            name="password"
+            autoComplete="current-password"
+            aria-label="Kata Sandi"
             data-testid="login-password-input"
             value={password}
             onChange={onPasswordChange}

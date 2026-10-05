@@ -252,7 +252,7 @@ function DetailPage() {
               </div>
             </div>
 
-            <div className="flex items-center gap-1.5 text-xs text-slate-400">
+            <div className="flex items-center gap-1.5 text-xs text-slate-600">
               <IconCalendar size={14} className="shrink-0" />
               <span>
                 Dipublikasikan{" "}
@@ -314,6 +314,10 @@ function DetailPage() {
         <form onSubmit={handleSubmitComment} className="flex flex-col sm:flex-row gap-3">
           <input
             type="text"
+            id="comment-input"
+            name="comment"
+            autoComplete="off"
+            aria-label="Tulis komentar"
             data-testid="comment-input"
             value={newComment}
             onChange={onNewCommentChange}
@@ -342,7 +346,7 @@ function DetailPage() {
 
         {/* Daftar komentar */}
         {comments.length === 0 ? (
-          <div className="py-10 text-center text-sm text-slate-400">
+          <div className="py-10 text-center text-sm text-slate-600">
             Belum ada komentar pada postingan ini. Jadilah yang pertama!
           </div>
         ) : (
@@ -379,7 +383,7 @@ function DetailPage() {
                     <p className="text-sm text-slate-600 mt-1 break-words">
                       {comment.comment}
                     </p>
-                    <p className="text-[11px] text-slate-400 mt-1.5">
+                    <p className="text-[11px] text-slate-600 mt-1.5">
                       {formatDate(comment.created_at)}
                     </p>
                   </div>
@@ -388,7 +392,7 @@ function DetailPage() {
                       type="button"
                       data-testid={`delete-comment-${comment.id}`}
                       onClick={handleDeleteComment}
-                      className="self-start p-1.5 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+                      className="self-start p-1.5 text-slate-600 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
                       title="Hapus Komentar"
                     >
                       <IconTrash size={16} />

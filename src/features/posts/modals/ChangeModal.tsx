@@ -90,7 +90,7 @@ function ChangeModal({ show, onClose, postId, onChanged }: ChangeModalProps) {
               <h3 className="text-base font-bold text-slate-800">
                 Ubah Deskripsi Postingan
               </h3>
-              <p className="text-[11px] text-slate-400">
+              <p className="text-[11px] text-slate-600">
                 Perbarui isi cerita pada postinganmu
               </p>
             </div>
@@ -99,7 +99,7 @@ function ChangeModal({ show, onClose, postId, onChanged }: ChangeModalProps) {
             type="button"
             data-testid="close-edit-modal-btn"
             onClick={onClose}
-            className="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
+            className="p-1.5 rounded-lg text-slate-600 hover:text-slate-600 hover:bg-slate-100 transition-colors"
           >
             <IconX size={18} />
           </button>
@@ -111,6 +111,9 @@ function ChangeModal({ show, onClose, postId, onChanged }: ChangeModalProps) {
               Deskripsi Postingan <span className="text-red-500">*</span>
             </label>
             <textarea
+              id="edit-post-description-input"
+              name="description"
+              aria-label="Deskripsi postingan"
               data-testid="edit-post-description-input"
               value={description}
               onChange={(e) => setDescription(e.target.value)}

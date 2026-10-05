@@ -54,10 +54,14 @@ function RegisterPage() {
         <div className="relative">
           <IconUser
             size={18}
-            className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"
+            className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-600"
           />
           <input
             type="text"
+            id="register-name-input"
+            name="name"
+            autoComplete="name"
+            aria-label="Nama Lengkap"
             data-testid="register-name-input"
             value={name}
             onChange={onChangeName}
@@ -75,10 +79,14 @@ function RegisterPage() {
         <div className="relative">
           <IconMail
             size={18}
-            className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"
+            className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-600"
           />
           <input
             type="email"
+            id="register-email-input"
+            name="email"
+            autoComplete="email"
+            aria-label="Alamat Email"
             data-testid="register-email-input"
             value={email}
             onChange={onChangeEmail}
@@ -96,10 +104,14 @@ function RegisterPage() {
         <div className="relative">
           <IconLock
             size={18}
-            className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"
+            className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-600"
           />
           <input
             type="password"
+            id="register-password-input"
+            name="password"
+            autoComplete="new-password"
+            aria-label="Kata Sandi"
             data-testid="register-password-input"
             value={password}
             onChange={onChangePassword}
