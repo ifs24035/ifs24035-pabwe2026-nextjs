@@ -294,6 +294,8 @@ function HomePage() {
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
                       src={post.cover}
+                      loading="lazy"
+                      decoding="async"
                       alt={post.description || `Postingan ${post.id}`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
@@ -313,6 +315,8 @@ function HomePage() {
                       // eslint-disable-next-line @next/next/no-img-element
                       <img
                         src={post.author.photo}
+                        loading="lazy"
+                        decoding="async"
                         alt={post.author?.name || "Penulis"}
                         className="w-9 h-9 rounded-full object-cover border border-slate-200"
                       />

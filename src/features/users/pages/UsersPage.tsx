@@ -100,6 +100,8 @@ function UsersPage() {
                   {u.photo ? (
                     <img
                       src={u.photo}
+                      loading="lazy"
+                      decoding="async"
                       alt={u.name}
                       className="w-12 h-12 rounded-full object-cover border border-slate-200 shrink-0"
                     />
