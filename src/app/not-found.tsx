@@ -3,7 +3,7 @@ import { IconAlertTriangle, IconArrowLeft } from "@tabler/icons-react";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-yellow-100/50 to-amber-100/40 flex items-center justify-center p-4 sm:p-6 lg:p-8">
+    <main className="min-h-screen bg-gradient-to-br from-amber-50 via-yellow-100/50 to-amber-100/40 flex items-center justify-center p-4 sm:p-6 lg:p-8">
       <div className="max-w-md w-full bg-white/95 backdrop-blur-md rounded-3xl p-8 shadow-xl shadow-amber-500/10 border border-amber-200/60 text-center">
         <div className="inline-flex w-16 h-16 rounded-2xl bg-amber-100 text-amber-600 items-center justify-center mb-6 shadow-sm border border-amber-200">
           <IconAlertTriangle size={36} stroke={2.2} />
@@ -31,6 +31,6 @@ export default function NotFound() {
           Kembali ke Beranda
         </Link>
       </div>
-    </div>
+    </main>
   );
 }

@@ -51,12 +51,13 @@ function PostLayout({ children }: { children: React.ReactNode }) {
 
   if (!profile) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-50">
+      <main className="min-h-screen flex items-center justify-center bg-slate-50">
         <div className="flex flex-col items-center gap-3">
+          <h1 className="sr-only">Delcom Post</h1>
           <div className="w-10 h-10 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin" />
           <p className="text-sm font-medium text-slate-600">Memuat sesi pengguna...</p>
         </div>
-      </div>
+      </main>
     );
   }
 

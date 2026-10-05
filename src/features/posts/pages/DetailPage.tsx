@@ -112,6 +112,7 @@ function DetailPage() {
   if (!profile || !post) {
     return (
       <div className="flex flex-col items-center justify-center py-20">
+        <h1 className="sr-only">Rincian Postingan</h1>
         <div className="w-8 h-8 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin" />
       </div>
     );
@@ -204,6 +205,8 @@ function DetailPage() {
           </div>
         )}
       </div>
+
+      <h1 className="sr-only">Rincian Postingan</h1>
 
       {/* Kartu Utama */}
       <article className="bg-white rounded-3xl border border-slate-200/80 shadow-xs overflow-hidden">

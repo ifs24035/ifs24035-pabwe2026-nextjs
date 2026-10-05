@@ -159,7 +159,7 @@ function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">
               Total Postingan
             </p>
-            <h3 className="text-3xl font-black text-slate-800 mt-1">{totalPosts}</h3>
+            <p className="text-3xl font-black text-slate-800 mt-1">{totalPosts}</p>
           </div>
           <div className="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center">
             <IconLayoutGrid size={26} stroke={2} />
@@ -171,7 +171,7 @@ function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">
               Total Suka
             </p>
-            <h3 className="text-3xl font-black text-rose-500 mt-1">{totalLikes}</h3>
+            <p className="text-3xl font-black text-rose-500 mt-1">{totalLikes}</p>
           </div>
           <div className="w-12 h-12 rounded-2xl bg-rose-50 text-rose-500 flex items-center justify-center">
             <IconHeart size={26} stroke={2} />
@@ -183,7 +183,7 @@ function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">
               Total Komentar
             </p>
-            <h3 className="text-3xl font-black text-sky-600 mt-1">{totalComments}</h3>
+            <p className="text-3xl font-black text-sky-600 mt-1">{totalComments}</p>
           </div>
           <div className="w-12 h-12 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center">
             <IconMessageCircle size={26} stroke={2} />

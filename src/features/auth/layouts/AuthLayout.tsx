@@ -36,19 +36,19 @@ function AuthLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-indigo-50/40 to-slate-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-      <div className="sm:mx-auto sm:w-full sm:max-w-md text-center">
+      <header className="sm:mx-auto sm:w-full sm:max-w-md text-center">
         <div className="inline-flex w-14 h-14 rounded-2xl bg-gradient-to-tr from-indigo-600 to-cyan-500 items-center justify-center text-white shadow-xl shadow-indigo-500/25 mb-3">
           <IconNews size={32} stroke={2.5} />
         </div>
-        <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
+        <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">
           Delcom Post
-        </h2>
+        </h1>
         <p className="mt-1 text-sm text-slate-500">
           Aplikasi Berbagi Cerita & Postingan Modern
         </p>
-      </div>
+      </header>
 
-      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md px-4 sm:px-0">
+      <main className="mt-8 sm:mx-auto sm:w-full sm:max-w-md px-4 sm:px-0">
         <div className="bg-white py-8 px-6 sm:px-10 shadow-xl shadow-slate-200/50 rounded-3xl border border-slate-100">
           <div className="flex rounded-2xl bg-slate-100 p-1 mb-6">
             <Link
@@ -75,7 +75,7 @@ function AuthLayout({ children }: { children: React.ReactNode }) {
 
           {children}
         </div>
-      </div>
+      </main>
     </div>
   );
 }

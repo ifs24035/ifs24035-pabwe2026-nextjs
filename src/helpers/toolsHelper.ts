@@ -1,6 +1,14 @@
-import Swal from "sweetalert2";
+type SwalModule = typeof import("sweetalert2").default;
 
-export function showErrorDialog(message) {
+// SweetAlert2 dimuat saat dibutuhkan (dynamic import) supaya tidak ikut masuk
+// ke bundel awal halaman; ini menekan jumlah JavaScript yang tidak terpakai.
+async function loadSwal(): Promise<SwalModule> {
+  const mod = await import("sweetalert2");
+  return mod.default;
+}
+
+export async function showErrorDialog(message) {
+  const Swal = await loadSwal();
   return Swal.fire({
     title: "Terjadi Kesalahan",
     text: message,
@@ -15,7 +23,8 @@ export function showErrorDialog(message) {
   });
 }
 
-export function showWarningDialog(message) {
+export async function showWarningDialog(message) {
+  const Swal = await loadSwal();
   return Swal.fire({
     title: "Peringatan",
     text: message,
@@ -30,7 +39,8 @@ export function showWarningDialog(message) {
   });
 }
 
-export function showSuccessDialog(message) {
+export async function showSuccessDialog(message) {
+  const Swal = await loadSwal();
   return Swal.fire({
     title: "Tindakan Berhasil",
     text: message,
@@ -45,7 +55,8 @@ export function showSuccessDialog(message) {
   });
 }
 
-export function showConfirmDialog(message) {
+export async function showConfirmDialog(message) {
+  const Swal = await loadSwal();
   return Swal.fire({
     title: "Konfirmasi",
     text: message,

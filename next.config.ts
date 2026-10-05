@@ -2,6 +2,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  // CSS di-inline ke HTML agar tidak ada permintaan yang memblokir render.
+  experimental: {
+    inlineCss: true,
+  },
   poweredByHeader: false,
   // Turbopack diaktifkan sebagai bundler utama untuk dev maupun build.
   turbopack: {
