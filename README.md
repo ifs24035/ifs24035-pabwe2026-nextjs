@@ -242,3 +242,35 @@ bun run test:coverage
   `eslint.config.mjs`, karena arsitektur pemuatan data berbasis Redux thunk di dalam
   `useEffect` sengaja mengikuti pola modul latihan. `bun run lint` selesai dengan
   **0 error**.
+
+---
+
+## 8. Deploy ke Vercel
+
+Repositori ini siap di-deploy ke [Vercel](https://vercel.com) tanpa perubahan konfigurasi.
+
+1. Push repositori ke GitHub (branch `main`).
+2. Di Vercel: **Add New… → Project → Import** repositori tersebut.
+   - Framework Preset: **Next.js** (terdeteksi otomatis dari dependensi `next`)
+   - Install Command: **`bun install`** (terdeteksi dari `bun.lock` + `packageManager`)
+   - Build Command: biarkan default (`next build`)
+   - Root Directory: `./`
+3. Tambahkan **Environment Variable** untuk Production, Preview, dan Development:
+
+   | Name | Value |
+   | --- | --- |
+   | `NEXT_PUBLIC_DELCOM_BASEURL` | `https://open-api.delcom.org/api/v1` |
+
+4. Klik **Deploy**.
+
+> **Penting:** variabel `NEXT_PUBLIC_*` disisipkan (*inline*) pada saat build. Bila variabel
+> ini ditambahkan atau diubah setelah deploy, lakukan **Redeploy** agar nilai barunya ikut
+> tertanam. Tanpa variabel ini, aplikasi memakai nilai cadangan
+> `http://localhost:8000/api/v1` sehingga data tidak akan termuat di server Vercel.
+
+Setiap `git push` ke `main` otomatis memicu deployment produksi, sedangkan push ke branch
+lain menghasilkan *preview deployment* dengan URL tersendiri.
+
+Endpoint Delcom Open API mengirimkan header `Access-Control-Allow-Origin: *` (preflight
+`OPTIONS` membalas `204`), sehingga aplikasi dapat memanggil API langsung dari domain
+Vercel tanpa proxy tambahan.
