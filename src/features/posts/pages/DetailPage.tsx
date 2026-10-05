@@ -280,8 +280,8 @@ function DetailPage() {
               onClick={handleLike}
               className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all ${
                 isLiked
-                  ? "bg-rose-500 text-white shadow-md shadow-rose-500/25 hover:bg-rose-600"
-                  : "bg-rose-50 text-rose-600 hover:bg-rose-100 border border-rose-200/70"
+                  ? "bg-rose-700 text-white shadow-md shadow-rose-700/25 hover:bg-rose-800"
+                  : "bg-rose-50 text-rose-800 hover:bg-rose-100 border border-rose-200/70"
               }`}
             >
               <IconHeart size={18} fill={isLiked ? "currentColor" : "none"} />
