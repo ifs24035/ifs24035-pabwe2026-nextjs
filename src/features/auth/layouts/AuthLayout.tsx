@@ -19,6 +19,11 @@ function AuthLayout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const authToken = apiHelper.getAccessToken();
     if (authToken) {
+      // Sinkronkan cookie penanda sesi. Middleware hanya mengizinkan akses
+      // dashboard bila cookie ini ada, sedangkan sesi lama (dibuat sebelum
+      // cookie diperkenalkan) hanya menyimpan token di localStorage sehingga
+      // tanpa sinkronisasi ini pengguna bisa terjebak pengalihan berulang.
+      apiHelper.putAccessToken(authToken);
       dispatch(asyncSetProfile());
     }
   }, [dispatch]);
