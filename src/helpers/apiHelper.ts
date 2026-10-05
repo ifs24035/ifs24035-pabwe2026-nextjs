@@ -26,8 +26,14 @@ const apiHelper = (() => {
   function putAccessToken(token: string | null | undefined) {
     if (!token) {
       localStorage.removeItem("accessToken");
+      // Hapus cookie penanda sesi agar middleware ikut menutup akses dashboard.
+      document.cookie = "delcom_session=; path=/; max-age=0; samesite=lax";
     } else {
       localStorage.setItem("accessToken", token);
+      // Cookie ini dibaca middleware sehingga pengunjung yang belum masuk tidak
+      // perlu mengunduh bundel dashboard sama sekali.
+      document.cookie =
+        "delcom_session=1; path=/; max-age=2592000; samesite=lax";
     }
   }
 

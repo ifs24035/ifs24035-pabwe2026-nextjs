@@ -11,8 +11,11 @@ describe("apiHelper", () => {
     expect(apiHelper.getAccessToken()).toBeNull();
     apiHelper.putAccessToken("dummy-token");
     expect(apiHelper.getAccessToken()).toBe("dummy-token");
+    // Cookie cermin sesi dipakai middleware untuk route guarding di edge.
+    expect(document.cookie).toContain("delcom_session=1");
     apiHelper.putAccessToken("");
     expect(apiHelper.getAccessToken()).toBeNull();
+    expect(document.cookie).not.toContain("delcom_session=1");
   });
 
   it("should fetch data without query and append Authorization header when token exists", async () => {
